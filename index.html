@@ -9,24 +9,31 @@
       href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css"
     />
     <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="uk-navbar-container" uk-navbar>
-      <div class="uk-navbar-left">
-        <ul class="uk-navbar-nav">
-          <li class="uk-active"><a href="">About Us</a></li>
-          <li class="uk-parent"><a href="">Current Activities</a></li>
+      <div class="uk-navbar-left" id="navBar1"> <!--Adding an ID for styling in css -->
+        <ul class="uk-navbar-nav" id="navBarLinks">
+          <li class="uk-active"><a href="">Creat an Account</a></li>
+          <li class="uk-active"><a href="">User Guide</a></li>
+          <li class="uk-active"><a href=""></a></li>
+          <li class="uk-active"><a href="">Monthly Plan</a></li>
+          <li class="uk-active"><a href="">We Challenge You</a></li>
           <li><a href=""></a></li>
         </ul>
       </div>
     </nav>
     <nav class="uk-navbar-container" uk-navbar>
-      <div class="uk-navbar-left">
+       <div class="uk-navbar-left" id="navBar2"> <!--Adding an ID for styling in css -->
         <ul class="uk-navbar-nav">
           <li class="uk-active"><a href="">Username</a></li>
+          <li class="uk-active"><a href="">Level 1</a></li>
+          <li class="uk-active"><a href="">Brave Bunny</a></li>
           <li class="uk-parent"><a href=""></a></li>
           <li><a href=""></a></li>
         </ul>
+        <progress class="uk-progress" value="5" max="100"></progress>
       </div>
     </nav>
     <div uk-grid>
@@ -43,7 +50,7 @@
           </form>
         </div>
         <div class="uk-card uk-card-large uk-card-default">
-          <h3>Fear Conquered</h3>
+          <h3>Fears Conquered</h3>
           <input class="uk-checkbox" type="checkbox" />
         </div>
       </div>
