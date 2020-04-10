@@ -1,0 +1,32 @@
+#navBar1 {
+    text-emphasis-color: white;
+    background-color: #6a2c70;
+}
+#navBarLinks {
+    text-align: right;
+}
+
+
+#navBar2 {
+    text-emphasis-color: white;
+    background-color: #b83b5e;
+}
+
+progress{
+    border: black;
+    width: 20px;
+    height: 20px;
+    background: crimson;
+}
+
+progress::-uk-progress-value {
+
+
+}
+
+/* The button to invite Friends */
+.uk-button-default { 
+    position:relative;
+    margin-top: 40%;
+    background-color: #f08a5d;
+   } 
