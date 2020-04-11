@@ -19,7 +19,8 @@ progress{
     background: crimson;
 }
 
-progress :-webkit-progress-value {
+progress::-uk-progress-value {
+
 
 }
 
