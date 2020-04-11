@@ -41,21 +41,38 @@
     </nav>
     <div uk-grid>
       <div class="uk-column-1-3">
-        <div class="uk-card uk-card-body uk-card-default">
-          <h3 class="uk-card-title">Fear of the Month</h3>
-          <form></form>
+        <div id="fearsOfMonth" class="uk-card uk-card-body uk-card-default">
+          <h3 class="uk-card-title">Fears of the Month</h3>
+          <form>
+            <textarea class="uk-textarea"></textarea>
+            <button class="uk-button uk-button-primary">Add Fear</button>
+          </form>
+          <ul id="monthList" class="uk-list uk-list-striped">
+            <li>List item 1<input class="uk-checkbox" type="checkbox" /></li>
+            <li>List item 2<input class="uk-checkbox" type="checkbox" /></li>
+            <li>List item 3<input class="uk-checkbox" type="checkbox" /></li>
+        </ul>
         </div>
-        <div class="uk-card uk-card-body uk-card-default">
+        <div id="fearOfDay" class="uk-card uk-card-body uk-card-default">
           <h3 class="uk-card-title">Fear of the Day</h3>
           <form>
             <textarea class="uk-textarea"></textarea>
-            <input class="uk-checkbox" type="checkbox" />
+            <button class="uk-button uk-button-primary">Add Fear</button>
           </form>
+          <ul id="dayList" class="uk-list uk-list-striped">
+            <li>List item 1<input class="uk-checkbox" type="checkbox" /></li>
+            <li>List item 2<input class="uk-checkbox" type="checkbox" /></li>
+            <li>List item 3<input class="uk-checkbox" type="checkbox" /></li>
+        </ul>
         </div>
         <div class="uk-card uk-card-body uk-card-default">
-          <h3 class="uk-card-title">Fears Conquered</h3>
-          <input class="uk-checkbox" type="checkbox" />
+          <h3 id="fearsConquered" class="uk-card-title">Fears Conquered</h3>
         </div>
+        <ul id="conqueredList" class="uk-list uk-list-striped">
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+      </ul>
       </div>
     </div>
 
