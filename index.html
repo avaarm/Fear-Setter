@@ -5,25 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fear Setting</title>
+    <link rel="stylesheet" href="Develop/Style/normalize.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css"
     />
-    <link rel="stylesheet" href="Develop/Style/normalize.css" />
     <link rel="stylesheet" href="Develop/Style/style.css" />
     <link rel="" href="userGuide.html"/>
-  
   </head>
   <body>
     <nav class="uk-navbar-container" uk-navbar>
       <div class="uk-navbar-left" id="navBar1"> <!--Adding an ID for styling in css -->
         <ul class="uk-navbar-nav" id="navBarLinks">
           <img src="https://img.icons8.com/carbon-copy/100/000000/ghost.png"/>
-          <li class="uk-active"><a href="">Creat an Account</a></li>
-          <li class="uk-active"><a href="">User Guide</a></li>
+          <li class="uk-active"><a href="">Create an Account</a></li>
+          <li class="uk-active"><a href="userGuide.html">User Guide</a></li>
           <li class="uk-active"><a href=""></a></li>
-          <li class="uk-active"><a href="">Monthly Plan</a></li>
-          <li class="uk-active"><a href="">We Challenge You</a></li>
+          <li class="uk-active"><a href="monthlyPlan.html">Monthly Plan</a></li>
+          <li class="uk-active"><a href="challenge.html">We Challenge You</a></li>
           <li><a href=""></a></li>
         </ul>
       </div>
@@ -42,24 +41,44 @@
     </nav>
     <div uk-grid>
       <div class="uk-column-1-3">
-        <div class="uk-card uk-card-large uk-card-default">
-          <h3>Fear of the Month</h3>
-          <form></form>
-        </div>
-        <div class="uk-card uk-card-large uk-card-default">
-          <h3>Fear of the Day</h3>
+        <div id="fearsOfMonth" class="uk-card uk-card-body uk-card-default">
+          <h3 class="uk-card-title">Fears of the Month</h3>
           <form>
             <textarea class="uk-textarea"></textarea>
-            <input class="uk-checkbox" type="checkbox" />
+            <button class="uk-button uk-button-primary">Add Fear</button>
           </form>
+          <ul id="monthList" class="uk-list uk-list-striped">
+            <li>List item 1<input class="uk-checkbox" type="checkbox" /></li>
+            <li>List item 2<input class="uk-checkbox" type="checkbox" /></li>
+            <li>List item 3<input class="uk-checkbox" type="checkbox" /></li>
+        </ul>
         </div>
-        <div class="uk-card uk-card-large uk-card-default">
-          <h3>Fears Conquered</h3>
-          <input class="uk-checkbox" type="checkbox" />
+        <div id="fearOfDay" class="uk-card uk-card-body uk-card-default">
+          <h3 class="uk-card-title">Fear of the Day</h3>
+          <form>
+            <textarea class="uk-textarea"></textarea>
+            <button class="uk-button uk-button-primary">Add Fear</button>
+          </form>
+          <ul id="dayList" class="uk-list uk-list-striped">
+            <li>List item 1<input class="uk-checkbox" type="checkbox" /></li>
+            <li>List item 2<input class="uk-checkbox" type="checkbox" /></li>
+            <li>List item 3<input class="uk-checkbox" type="checkbox" /></li>
+        </ul>
         </div>
+        <div class="uk-card uk-card-body uk-card-default">
+          <h3 id="fearsConquered" class="uk-card-title">Fears Conquered</h3>
+        </div>
+        <ul id="conqueredList" class="uk-list uk-list-striped">
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+      </ul>
       </div>
     </div>
-    <button class="uk-button uk-button-default">Invite Friends</button>
+    <form action="inviteFriends.html" method="get" target="_blank">
+      <button class="uk-button uk-button-default" a href="inviteFriends.html">Invite Friends</button>
+   </form>
+    <!-- <button class="uk-button uk-button-default" a href="inviteFriends.html">Invite Friends</button> -->
   
   <script></script>
   <script></script>
