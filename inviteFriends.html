@@ -7,6 +7,65 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="facebook_invite"></div>
+    <button class="uk-button uk-button-default">Invite Friends Using Facebook</button>
+         <script src="http://connect.facebook.net/en_US/all.js"></script>
+         <a href="#" onclick="FBInvite()">Invite Facebook Friends</a>
+         <script>
+                FB.init({
+                 appId:'app_id',
+                 cookie:true,
+                 status:true,
+                 xfbml:true
+                });
+        </script>
+        <script>
+                function FBInvite(){
+                 FB.ui({
+                  method: 'apprequests',
+                  message: 'Invite your Facebook Friends'
+                 },function(response) {
+                  if (response) {
+                   alert('Successfully Invited');
+                  } else {
+                   alert('Failed To Invite');
+                  }
+                 });
+                }
+        </script>
+
+
+<form>
+        <fieldset class="uk-fieldset">
+    
+            <legend class="uk-legend">Life is Better With Friends !/legend>
+    
+            <div class="uk-margin">
+                <input class="uk-input" type="text" placeholder="Input">
+            </div>
+    
+            <div class="uk-margin">
+                <select class="uk-select">
+                    <option>Option 01</option>
+                    <option>Option 02</option>
+                </select>
+            </div>
+    
+            <div class="uk-margin">
+                <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+            </div>
+    
+            <div class="uk-margin">
+     
+            </div>
+    
+        </fieldset>
+</form>
+
+
+
+
+<img src="Develop/Images/images-1.png"/>
     
 </body>
 </html>
