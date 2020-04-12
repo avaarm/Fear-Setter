@@ -17,11 +17,7 @@
     <nav class="uk-navbar-container" uk-navbar>
       <div class="uk-navbar-left" id="navBar1"> <!--Adding an ID for styling in css -->
         <ul class="uk-navbar-nav" id="navBarLinks">
-
-
           <img src="https://img.icons8.com/carbon-copy/100/000000/ghost.png" alt="Ghost logo"/>
-
-
           <li class="uk-active"><a href="">Create an Account</a></li>
           <li class="uk-active"><a href="userGuide.html">User Guide</a></li>
           <li class="uk-active"><a href=""></a></li>
@@ -49,8 +45,8 @@
         <div id="fearsOfMonth" class="uk-card uk-card-body uk-card-default">
           <h3 class="uk-card-title">Fears of the Month</h3>
           <form>
-            <textarea class="uk-textarea"></textarea>
-            <button class="uk-button uk-button-primary">Add Fear</button>
+            <textarea id="fearsOfMonthText" class="uk-textarea"></textarea>
+            <button id="fearsOfMonthBtn" class="uk-button uk-button-primary">Add Fear</button>
           </form>
           <ul id="monthList" class="uk-list uk-list-striped">
             <li>List item 1<input class="uk-checkbox" type="checkbox" /></li>
@@ -61,8 +57,8 @@
         <div id="fearOfDay" class="uk-card uk-card-body uk-card-default">
           <h3 class="uk-card-title">Fear of the Day</h3>
           <form>
-            <textarea class="uk-textarea"></textarea>
-            <button class="uk-button uk-button-primary">Add Fear</button>
+            <textarea id="fearOfDayText" class="uk-textarea"></textarea>
+            <button id="fearOfDayBtn" class="uk-button uk-button-primary">Add Fear</button>
           </form>
           <ul id="dayList" class="uk-list uk-list-striped">
             <li>List item 1<input class="uk-checkbox" type="checkbox" /></li>
@@ -84,9 +80,10 @@
       <button class="uk-button uk-button-default" a href="inviteFriends.html">Invite Friends</button>
    </form>
     <!-- <button class="uk-button uk-button-default" a href="inviteFriends.html">Invite Friends</button> -->
-  
-  <script></script>
-  <script src="script2.js"></script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="Develop/script.js"></script>
+  <script src="Develop/script2.js"></script>
   <script></script>
   </body>
 </html>
