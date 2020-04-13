@@ -20,10 +20,10 @@
           <div class = "uk-navbar-item"></div>
             <ul class="uk-navbar-nav" id="navBarLinks">
               <li><a href="">Create an Account</a></li>
-              <li><a href="">User Guide</a></li>
+              <li><a href="userGuide.html">User Guide</a></li>
               <!-- <li class="uk-active"><a href=""></a></li> -->
-              <li><a href="">Monthly Plan</a></li>
-              <li class="uk-active"><a href="">Challenge Yourself</a></li>
+              <li><a href="monthlyPlan.html">Monthly Plan</a></li>
+              <li class="uk-active"><a href="challenge.html">Challenge Yourself</a></li>
               <!-- <li><a href=""></a></li> -->
             </ul>
           </div>
@@ -44,27 +44,33 @@
       </div>
     </nav>
 
-    <h1>Fear 1</h1>
+    <h1>Challenge yourself with a Fear-Setting Strategy</h1>
+    <input class="uk-input newBigFear" id="form-h-text" type="text" placeholder="New Fear">
+    <button class="uk-button uk-button-primary" id="addBtn1">Add Fear</button>
+
+    <hr class="uk-divider-icon">
+
+    <h2>Starter sample fear</h1>
     <div class = "uk-container">
       <div class = "uk-child-width-1-2 uk-grid" uk-grid>
         <div class = "uk-first-column">
           <div class = "uk-panel">
             <h4>Define: List the worst things that could happen</h4>
-            <ul>
+            <ul id="worstList">
               <li>
-                <input class="uk-input" id="form-h-text" type="text" placeholder="Something">
-                <button class="uk-button uk-button-primary">Add Thing</button>
+                <input class="uk-input newWorst" id="form-h-text" type="text" placeholder="Bad thing">
+                <button class="uk-button uk-button-primary" id="addBtn2">Add Thing</button>
               </li>
             </ul>
           </div>
         </div>
-        <div>
+        <div class = "second-column">
           <div class = "uk-panel">
             <h4>Prevent: List how you can stop the above bad things</h4>
             <ul>
-              <li>
-                <input class="uk-input" id="form-h-text" type="text" placeholder="How to">
-                <button class="uk-button uk-button-primary">Add Reason</button>
+              <li id="">
+                <input class="uk-input newPrevention" id="form-h-text" type="text" placeholder="How to">
+                <button class="uk-button uk-button-primary" id="addBtn3">Add Reason</button>
               </li>
             </ul>
           </div>
@@ -76,19 +82,19 @@
             <h4>Repair: If the worst happens, list how to repair each bad thing.</h4>
             <ul>
               <li>
-                <input class="uk-input" id="form-h-text" type="text" placeholder="How to">
-                <button class="uk-button uk-button-primary">Add how to</button>
+                <input class="uk-input newRepair" id="form-h-text" type="text" placeholder="How to">
+                <button class="uk-button uk-button-primary" id="addBtn4">Add how to</button>
               </li>
             </ul>
           </div>
         </div>
-        <div>
+        <div class = "second-column">
           <div class = "uk-panel">
             <h4>Benefits: List all possible benefits from taking this action</h4>
             <ul>
               <li>
-                <input class="uk-input" id="form-h-text" type="text" placeholder="Benefit">
-                <button class="uk-button uk-button-primary">Add Benefit</button>
+                <input class="uk-input newBenefit" id="form-h-text" type="text" placeholder="Benefit">
+                <button class="uk-button uk-button-primary" id="addBtn5">Add Benefit</button>
               </li>
             </ul>
           </div>
@@ -97,59 +103,14 @@
     </div>
 
     <hr class="uk-divider-icon">
-
-    <h1>Fear 2</h1>
-    <div class = "uk-container">
-      <div class = "uk-child-width-1-2 uk-grid" uk-grid>
-        <div class = "uk-first-column">
-          <div class = "uk-panel">
-            <h4>Define: List the worst things that could happen</h4>
-            <ul>
-              <li>
-
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <div class = "uk-panel">
-            <h4>Prevent: List how you can stop the above bad things</h4>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class = "uk-child-width-1-2 uk-grid" uk-grid>
-        <div class = "uk-first-column">
-          <div class = "uk-panel">
-            <h4>Repair: If the worst happens, list how to repair each bad thing.</h4>
-            <ul>
-              <li>
-
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <div class = "uk-panel">
-            <h4>Benefits: List all possible benefits from taking this action</h4>
-            <ul>
-              <li>
-                
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr class="uk-divider-icon">
+    <div class="dummydiv"></div>
     <button class="uk-button uk-button-default">Invite Friends</button>
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="Develop/config.js"></script>
   <script src="Develop/script.js"></script>
   <script src="Develop/script2.js"></script>
+<script>
+  
+</script>
   </body>
 </html>
