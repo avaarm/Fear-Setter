@@ -12,6 +12,7 @@ var fearsConqueredNew = ""
 
 renderFearsOfMonth();
 renderFearOfDay();
+// renderFearsConquered();
 
 function renderFearsOfMonth () {
     $("#monthList").empty();
@@ -72,16 +73,19 @@ $(document).ready(function(){
         if($(this).prop("checked") == true){
             fearsConqueredNew = $(this).parent().text();
             fearsConqueredList.push(fearsConqueredNew);
+            $(this).parent().remove();
+            $(this).remove();
             console.log(fearsConqueredNew);
+            // localStorage.removeItem("fearsOfMonthLocal", $(this).parent().text())
+            localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
    
-    if (fearsConqueredList.indexOf(fearsConqueredNew) === -1) {
-        fearsConqueredList.push(fearsConqueredNew);
-         localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
-    }
+    // if (fearsConqueredList.indexOf(fearsConqueredNew) === -1) {
+    //     fearsConqueredList.push(fearsConqueredNew);
+    //      localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
+    // }
 }
     renderFearsConquered();
-    }
-    )
+    })
 });
 
 // Possible drag and drop feature code:
