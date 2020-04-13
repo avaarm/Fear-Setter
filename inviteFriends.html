@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="facebook_invite"></div>
-    <button class="uk-button uk-button-default">Invite Friends Using Facebook</button>
-         <script src="http://connect.facebook.net/en_US/all.js"></script>
+
+    
+    
+   <!-- facebook Invite   -->
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
          <a href="#" onclick="FBInvite()">Invite Facebook Friends</a>
          <script>
                 FB.init({
@@ -35,37 +37,44 @@
         </script>
 
 
-<form>
-        <fieldset class="uk-fieldset">
-    
-            <legend class="uk-legend">Life is Better With Friends !/legend>
-    
-            <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="Input">
-            </div>
-    
-            <div class="uk-margin">
-                <select class="uk-select">
-                    <option>Option 01</option>
-                    <option>Option 02</option>
-                </select>
-            </div>
-    
-            <div class="uk-margin">
-                <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
-            </div>
-    
-            <div class="uk-margin">
-     
-            </div>
-    
-        </fieldset>
-</form>
+   <!-- Twitter Invite   -->
+<script>
+setShareLinks();
+
+function socialWindow(url) {
+  var left = (screen.width - 570) / 2;
+  var top = (screen.height - 570) / 2;
+  var params = "menubar=no,toolbar=no,status=no,width=570,height=570,top=" + top + ",left=" + left;
+  // Setting 'params' to an empty string will launch
+  // content in a new tab or window rather than a pop-up.
+  // params = "";
+  window.open(url,"NewWindow",params);
+}
+
+function setShareLinks() {
+  var pageUrl = encodeURIComponent(document.URL);
+  var tweet = encodeURIComponent($("meta[property='og:description']").attr("content"));
+
+  $(".social-share.facebook").on("click", function() {
+    url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
+    socialWindow(url);
+  });
+
+  $(".social-share.twitter").on("click", function() {
+    url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + tweet;
+    socialWindow(url);
+  });
+
+  $(".social-share.linkedin").on("click", function() {
+    url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
+    socialWindow(url);
+  })
+}
+
+</script>
 
 
-
-
-<img src="Develop/Images/images-1.png"/>
+<img src="Develop/Images/images-1.png" id="inviteFriendsImg"/>
     
 </body>
 </html>
