@@ -1,3 +1,37 @@
+var newUsername = ""
+// var modal = document.getElementById("myModal");
+var savebtn = document.getElementsByClassName("saveUserbtn");
+// Get the button that opens the modal
+var usernamebtn = document.getElementById("createUser");
+// var btn = $("#createUser");
+var cancel = document.getElementsByClassName("cancelbtn")[0];
+usernamebtn.onclick = function() {
+    $("#usernameModal").css("display", "block");
+}
+
+cancel.onclick = function() {
+    $("#usernameModal").css("display", "none");
+    // $("#usernameModal").style.display = "none";
+}
+savebtn.onclick = function() {
+    // event.preventDefault();
+    storeUser();
+    $("#usernameModal").css("display", "none");
+}
+
+function storeUser () {
+    var newUsername = $("usernameInput").val();
+    console.log(newUsername);
+    // $("#user").text(newUsername);
+}
+// // When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == $("#usernameModal")) {
+    $("#usernameModal").css("display", "none");
+  }
+}
+
+
 var fearsOfMonthList = JSON.parse(localStorage.getItem("fearsOfMonthLocal")) || []; 
 var fearsOfMonthListEl = $("#monthList");
 var fearsOfMonthNew = ""
@@ -76,7 +110,12 @@ $(document).ready(function(){
             $(this).parent().remove();
             $(this).remove();
             console.log(fearsConqueredNew);
-            // localStorage.removeItem("fearsOfMonthLocal", $(this).parent().text())
+
+            //parse whole fearsOfMonthLocal
+            // remove item
+            // restore
+            localStorage.removeItem("fearsOfMonthLocal", $(this).parent().text());
+            console.log($(this).parent().text());
             localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
    
     // if (fearsConqueredList.indexOf(fearsConqueredNew) === -1) {
