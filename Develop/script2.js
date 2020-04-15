@@ -12,7 +12,7 @@ var fearsConqueredNew = ""
 
 renderFearsOfMonth();
 renderFearOfDay();
-// renderFearsConquered();
+renderFearsConquered();
 
 function renderFearsOfMonth () {
     $("#monthList").empty();
