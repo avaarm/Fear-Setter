@@ -107,38 +107,21 @@ $(document).ready(function(){
         if($(this).prop("checked") == true){
             fearsConqueredNew = $(this).parent().text();
             fearsConqueredList.push(fearsConqueredNew);
+            var fearRemoved = $(this).parent().text();
             $(this).parent().remove();
             $(this).remove();
-            console.log(fearsConqueredNew);
-
-            //parse whole fearsOfMonthLocal
-            // remove item
-            // restore
-            localStorage.removeItem("fearsOfMonthLocal", $(this).parent().text());
-            console.log($(this).parent().text());
+            fearsOfMonthList = JSON.parse(localStorage.getItem("fearsOfMonthLocal")) || [];
+            // console.log(fearsOfMonthList);
+            // console.log(fearRemoved);
+            fearsOfMonthList.splice(fearRemoved, 1);
+            // console.log(fearsOfMonthList);
+            localStorage.setItem("fearsOfMonthLocal", JSON.stringify(fearsOfMonthList));
+            console.log(fearsOfMonthList);
+            // localStorage.removeItem("fearsOfMonthLocal", $(this).parent().text());
+            // console.log($(this).parent().text());
             localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
-   
-    // if (fearsConqueredList.indexOf(fearsConqueredNew) === -1) {
-    //     fearsConqueredList.push(fearsConqueredNew);
-    //      localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
-    // }
 }
-    renderFearsConquered();
+renderFearsOfMonth();    
+renderFearsConquered();
     })
 });
-
-// Possible drag and drop feature code:
-
-// function allowDrop(ev) {
-//     ev.preventDefault();
-//   }
-  
-//   function drag(ev) {
-//     ev.dataTransfer.setData("text", ev.target.id);
-//   }
-  
-//   function drop(ev) {
-//     ev.preventDefault();
-//     var data = ev.dataTransfer.getData("text");
-//     ev.target.append($("#data"));
-//   }
