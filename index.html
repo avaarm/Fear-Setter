@@ -11,17 +11,15 @@
       href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css"
     />
     <link rel="stylesheet" href="Develop/Style/style.css" />
-
   </head>
   <body>
     <nav class="uk-navbar-container" uk-navbar>
       <div class="uk-navbar-left" id="navBar1"> <!--Adding an ID for styling in css -->
         <ul class="uk-navbar-nav" id="navBarLinks">
           <img src="https://img.icons8.com/carbon-copy/100/000000/ghost.png" alt="Ghost logo"/>
-          <li class="uk-active"><a href="">Create an Account</a></li>
+          <li  class="uk-active"><a id="createUser" href="#usernameModal">Create an Account</a></li>
+          <li class="uk-active"><a href="index.html">Home</a></li>
           <li class="uk-active"><a href="userGuide.html">User Guide</a></li>
-          <li class="uk-active"><a href=""></a></li>
-          <li class="uk-active"><a href="monthlyPlan.html">Monthly Plan</a></li>
           <li class="uk-active"><a href="challenge.html">We Challenge You</a></li>
           <li><a href=""></a></li>
         </ul>
@@ -30,8 +28,8 @@
     <nav class="uk-navbar-container" uk-navbar>
        <div class="uk-navbar-left" id="navBar2"> <!--Adding an ID for styling in css -->
         <ul class="uk-navbar-nav">
-          <img src="https://img.icons8.com/color/100/000000/dinosaur.png" alt="Profile photo" width="100px" height="100px"/>
-          <li class="uk-active"><a href="">Username</a></li>
+          <img id="dinoUser" src="https://img.icons8.com/color/100/000000/dinosaur.png" alt="Profile photo" width="100px" height="100px"/>
+          <li id="user" class="uk-active"><a href=""></a></a></li>
           <li class="uk-active"><a href="">Level 1</a></li>
           <li class="uk-active"><a href="">Brave Bunny</a></li>
           <li class="uk-parent"><a href=""></a></li>
@@ -40,6 +38,22 @@
         <progress class="uk-progress" value="5" max="100"></progress>
       </div>
     </nav>
+
+    <div id="usernameModal" class="modal">
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <p>Please enter a username.</p>
+          <hr>
+          <label for="username"><b>Username</b></label>
+          <input id="usernameInput" type="text" placeholder="Enter username" name="username">
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="button" class="saveUserbtn">Save Username</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
     <div uk-grid class="uk-grid">
       <div class="uk-width-1-3">
         <div id="fearsOfMonth" class="uk-card uk-card-body uk-card-default">
@@ -49,9 +63,6 @@
             <button id="fearsOfMonthBtn" class="uk-button uk-button-primary">Add Fear</button>
           </form>
           <ul id="monthList" class="uk-list uk-list-striped">
-            <!-- <li>List item 1<input class="uk-checkbox" type="checkbox" /></li>
-            <li>List item 2<input class="uk-checkbox" type="checkbox" /></li>
-            <li>List item 3<input class="uk-checkbox" type="checkbox" /></li> -->
         </ul>
         </div>
       </div>
@@ -63,9 +74,6 @@
             <button id="fearOfDayBtn" class="uk-button uk-button-primary">Add Fear</button>
           </form>
           <ul id="dayList" class="uk-list uk-list-striped">
-            <!-- <li>List item 1<input class="uk-checkbox" type="checkbox" /></li>
-            <li>List item 2<input class="uk-checkbox" type="checkbox" /></li>
-            <li>List item 3<input class="uk-checkbox" type="checkbox" /></li> -->
         </ul>
         </div>
       </div>
@@ -74,9 +82,6 @@
           <h3 id="fearsConquered" class="uk-card-title">Fears Conquered</h3>
         </div>
         <ul id="conqueredList" class="uk-list uk-list-striped">
-          <!-- <li>List item 1</li>
-          <li>List item 2</li>
-          <li>List item 3</li> -->
       </ul>
       </div>
     </div>
@@ -85,7 +90,9 @@
    </form>
     
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="Develop/script.js"></script>
+  <!-- <script src="Develop/uikit.js"></script> -->
+  <!-- <script src="Develop/config.js"></script>
+  <script src="Develop/script.js"></script> -->
   <script src="Develop/script2.js"></script>
   <script></script>
   </body>
