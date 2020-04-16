@@ -1,80 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e96805a8f45440019f5b0e6&product=inline-share-buttons&cms=website' async='async'></script>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="Develop/Style/normalize.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css"
+/>
+  <link rel="stylesheet" href="Develop/Style/friends.css" />
+
 </head>
 <body>
-
     
-    
-   <!-- facebook Invite   -->
-    <script src="http://connect.facebook.net/en_US/all.js"></script>
-         <a href="#" onclick="FBInvite()">Invite Facebook Friends</a>
-         <script>
-                FB.init({
-                 appId:'app_id',
-                 cookie:true,
-                 status:true,
-                 xfbml:true
-                });
-        </script>
-        <script>
-                function FBInvite(){
-                 FB.ui({
-                  method: 'apprequests',
-                  message: 'Invite your Facebook Friends'
-                 },function(response) {
-                  if (response) {
-                   alert('Successfully Invited');
-                  } else {
-                   alert('Failed To Invite');
-                  }
-                 });
-                }
-        </script>
+    <nav id="wave" class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <p> Sharing is Caring...</p>
+        </div>
+    </nav>
 
-
-   <!-- Twitter Invite   -->
-<script>
-setShareLinks();
-
-function socialWindow(url) {
-  var left = (screen.width - 570) / 2;
-  var top = (screen.height - 570) / 2;
-  var params = "menubar=no,toolbar=no,status=no,width=570,height=570,top=" + top + ",left=" + left;
-  // Setting 'params' to an empty string will launch
-  // content in a new tab or window rather than a pop-up.
-  // params = "";
-  window.open(url,"NewWindow",params);
-}
-
-function setShareLinks() {
-  var pageUrl = encodeURIComponent(document.URL);
-  var tweet = encodeURIComponent($("meta[property='og:description']").attr("content"));
-
-  $(".social-share.facebook").on("click", function() {
-    url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
-    socialWindow(url);
-  });
-
-  $(".social-share.twitter").on("click", function() {
-    url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + tweet;
-    socialWindow(url);
-  });
-
-  $(".social-share.linkedin").on("click", function() {
-    url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
-    socialWindow(url);
-  })
-}
-
-</script>
-
-
-<img src="Develop/Images/images-1.png" id="inviteFriendsImg"/>
-    
+  <img src="Develop/Images/friends-1.png" alt="Paris" class="center">
+  <div class="sharethis-inline-share-buttons"></div>
+   
+  
 </body>
 </html>
