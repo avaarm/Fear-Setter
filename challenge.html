@@ -19,60 +19,67 @@
         <div class="uk-navbar-right">
           <div class = "uk-navbar-item"></div>
             <ul class="uk-navbar-nav" id="navBarLinks">
+              <li><a href="index.html">Home</a></li>
               <li><a href="">Create an Account</a></li>
               <li><a href="userGuide.html">User Guide</a></li>
-              <!-- <li class="uk-active"><a href=""></a></li> -->
-              <li><a href="monthlyPlan.html">Monthly Plan</a></li>
               <li class="uk-active"><a href="challenge.html">Challenge Yourself</a></li>
-              <!-- <li><a href=""></a></li> -->
             </ul>
           </div>
         </div>
       </div>
     </nav>
     <nav class="uk-navbar-container" uk-navbar>
-       <div class="uk-navbar-left" id="navBar2"> <!--Adding an ID for styling in css -->
-        <ul class="uk-navbar-nav">
-          <img src="https://img.icons8.com/color/100/000000/dinosaur.png" alt="Profile photo" width="100px" height="100px"/>
-          <li class="uk-active"><a href="">Username</a></li>
-          <li class="uk-active"><a href="">Level 1</a></li>
-          <li class="uk-active"><a href="">Brave Bunny</a></li>
-          <li class="uk-parent"><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
-        <progress class="uk-progress" value="5" max="100"></progress>
+       <div class="uk-navbar" id="navBar2"> <!--Adding an ID for styling in css -->
+        <div class = "uk-navbar-center">
+          <ul class="uk-navbar-nav">
+            <img src="https://img.icons8.com/color/100/000000/dinosaur.png"   alt="Profile photo" width="100px" height="100px"/>
+            <li><a href="">Username</a></li>
+            <li><a href="">Level 1</a></li>
+            <li><a href="">Brave Bunny</a></li>
+          </ul>
+          <progress class="uk-progress" value="5" max="100"></progress>
+        </div>
       </div>
     </nav>
 
     <h1>Challenge yourself with a Fear-Setting Strategy</h1>
-    <input class="uk-input newBigFear" id="form-h-text" type="text" placeholder="New Fear">
-    <button class="uk-button uk-button-primary" id="addBtn1">Add Fear</button>
+    <p>What is your worst, biggest fear? Help yourself out by diving deep into it.</p>
+    <div class = "uk-container">
+      <div class = "uk-child-width-1-2 uk-grid" uk-grid>
+        <div class = "uk-first-column">
+          <div class = "uk-panel">
+            <input class="uk-input bigFear" id="form-h-text" type="text" placeholder="Biggest Fear">
+            <button class="uk-button uk-button-primary" id="changeFear1">Change Your Fear</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <hr class="uk-divider-icon">
 
-    <h2>Starter sample fear</h1>
+    <h2 class = "chosenFear">Your Fear Here</h2>
+    <button class="uk-button uk-button-primary" id="saveFear">Save Fear</button>
+
     <div class = "uk-container">
       <div class = "uk-child-width-1-2 uk-grid" uk-grid>
         <div class = "uk-first-column">
           <div class = "uk-panel">
             <h4>Define: List the worst things that could happen</h4>
-            <ul id="worstList">
-              <li>
-                <input class="uk-input newWorst" id="form-h-text" type="text" placeholder="Bad thing">
-                <button class="uk-button uk-button-primary" id="addBtn2">Add Thing</button>
-              </li>
+            <ul id="defineList1">
+
             </ul>
+            <input class="uk-input newWorst" id="form-h-text" type="text" placeholder="Bad thing">
+            <button class="uk-button uk-button-primary" id="addThing1">Add Thing</button>
           </div>
         </div>
         <div class = "second-column">
           <div class = "uk-panel">
             <h4>Prevent: List how you can stop the above bad things</h4>
-            <ul>
-              <li id="">
-                <input class="uk-input newPrevention" id="form-h-text" type="text" placeholder="How to">
-                <button class="uk-button uk-button-primary" id="addBtn3">Add Reason</button>
-              </li>
+            <ul id="preventList1">
+
             </ul>
+            <input class="uk-input newPrevention" id="form-h-text" type="text" placeholder="How to">
+            <button class="uk-button uk-button-primary" id="addPrevention1">Add Prevention</button>
           </div>
         </div>
       </div>
@@ -80,37 +87,92 @@
         <div class = "uk-first-column">
           <div class = "uk-panel">
             <h4>Repair: If the worst happens, list how to repair each bad thing.</h4>
-            <ul>
-              <li>
-                <input class="uk-input newRepair" id="form-h-text" type="text" placeholder="How to">
-                <button class="uk-button uk-button-primary" id="addBtn4">Add how to</button>
-              </li>
+            <ul id="repairList1">
+
             </ul>
+            <input class="uk-input newRepair" id="form-h-text" type="text" placeholder="How to">
+            <button class="uk-button uk-button-primary" id="addHow1">Add how to</button>
           </div>
         </div>
         <div class = "second-column">
           <div class = "uk-panel">
             <h4>Benefits: List all possible benefits from taking this action</h4>
-            <ul>
-              <li>
-                <input class="uk-input newBenefit" id="form-h-text" type="text" placeholder="Benefit">
-                <button class="uk-button uk-button-primary" id="addBtn5">Add Benefit</button>
-              </li>
+            <ul id="benefitsList1">
+              
             </ul>
+            <input class="uk-input newBenefit" id="form-h-text" type="text" placeholder="Benefit">
+            <button class="uk-button uk-button-primary" id="addBenefit1">Add Benefit</button>
           </div>
         </div>
       </div>
     </div>
 
     <hr class="uk-divider-icon">
-    <div class="dummydiv"></div>
+
     <button class="uk-button uk-button-default">Invite Friends</button>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="Develop/config.js"></script>
   <script src="Develop/script.js"></script>
   <script src="Develop/script2.js"></script>
 <script>
-  
+
+  if(localStorage.getItem("bigFearObject") !== null) {
+    var bigFearObject = JSON.parse(localStorage.getItem("bigFearObject"));
+    $(".chosenFear").text(bigFearObject[0].chosenFear);
+    for (var i = 0; i < bigFearObject[0].addedThings.length; i++){
+      $("#defineList1").append($("<li>").text(bigFearObject[0].addedThings[i]));
+    }
+    for (var i = 0; i < bigFearObject[0].addedPreventions.length; i++){
+      $("#preventList1").append($("<li>").text(bigFearObject[0].addedPreventions[i]));
+    }
+    for (var i = 0; i < bigFearObject[0].addedRepairs.length; i++){
+      $("#repairList1").append($("<li>").text(bigFearObject[0].addedRepairs[i]));
+    }
+    for (var i = 0; i < bigFearObject[0].addedBenefits.length; i++){
+      $("#benefitsList1").append($("<li>").text(bigFearObject[0].addedBenefits[i]));
+    }
+  } else {
+    var bigFearObject = [{chosenFear: "", addedThings: [], addedPreventions: [], addedRepairs: [], addedBenefits: []}];
+  }
+
+  $("#changeFear1").on("click", function() {
+    $("#defineList1").empty();
+    $("#preventList1").empty();
+    $("#repairList1").empty();
+    $("#benefitsList1").empty();
+    bigFearObject = [{chosenFear: "", addedThings: [], addedPreventions: [], addedRepairs: [], addedBenefits: []}];
+    $(".chosenFear").text($(".bigFear").val());
+    bigFearObject[0].chosenFear = $(".bigFear").val();
+  });
+
+  $("#addThing1").on("click", function () {
+    var addedThing = $("<li>").text($(".newWorst").val());
+    $("#defineList1").append(addedThing);
+    bigFearObject[0].addedThings.push($(".newWorst").val());
+  });
+
+  $("#addPrevention1").on("click", function () {
+    var addedPrevention = $("<li>").text($(".newPrevention").val());
+    $("#preventList1").append(addedPrevention);
+    bigFearObject[0].addedPreventions.push($(".newPrevention").val());
+  });
+
+  $("#addHow1").on("click", function () {
+    var addedRepair = $("<li>").text($(".newRepair").val());
+    $("#repairList1").append(addedRepair);
+    bigFearObject[0].addedRepairs.push($(".newRepair").val());
+  });
+
+  $("#addBenefit1").on("click", function () {
+    var addedBenefit = $("<li>").text($(".newBenefit").val());
+    $("#benefitsList1").append(addedBenefit);
+    bigFearObject[0].addedBenefits.push($(".newBenefit").val());
+  });
+
+  $("#saveFear").on("click", function () {
+    localStorage.setItem("bigFearObject", JSON.stringify(bigFearObject));
+  })
+
 </script>
   </body>
 </html>
