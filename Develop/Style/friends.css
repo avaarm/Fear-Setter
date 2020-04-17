@@ -1,6 +1,6 @@
 
 body {
-  background-image: url ("scott-webb-obKbq4Z3cuA-unsplash.jpg");
+  background-color: orange;
   
  }
 
@@ -14,13 +14,14 @@ body {
 }
 
 .uk-navbar-left {
-  color: orangered;
+  color:#b24968;
   background-color: papayawhip;
-
-
   
 }
 
+#adorable-avatar {
+  padding-top: 10px;
+}
 
 
 p {
