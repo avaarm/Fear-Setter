@@ -1,6 +1,16 @@
+body {
+  background-image: url("Background-3.png") ;
+  /* height: 100vh; */
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100%;
+}
+
+
 #navBar1 {
     text-emphasis-color: white;
-    background-color: #ffd460;
+    background-color: purple;
 }
 #navBarLinks {
     text-align: right;
