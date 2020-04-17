@@ -1,4 +1,4 @@
-var newUsername = ""
+var newUsername = JSON.parse(localStorage.getItem("userLocal"))
 // var modal = document.getElementById("myModal");
 var savebtn = document.getElementsByClassName("saveUserbtn")[0];
 // Get the button that opens the modal
@@ -14,9 +14,8 @@ cancel.onclick = function() {
     // $("#usernameModal").style.display = "none";
 }
 savebtn.onclick = function() {
-    // event.preventDefault();
+
     storeUser();
-    // alert("user saved");
     $("#usernameModal").css("display", "none");
 }
 
@@ -34,6 +33,7 @@ window.onclick = function(event) {
 }
 
 
+
 var fearsOfMonthList = JSON.parse(localStorage.getItem("fearsOfMonthLocal")) || []; 
 var fearsOfMonthListEl = $("#monthList");
 var fearsOfMonthNew = ""
@@ -49,6 +49,7 @@ var fearsConqueredNew = ""
 renderFearsOfMonth();
 renderFearOfDay();
 renderFearsConquered();
+storeUser ();
 
 // function renderFearsOfMonth () {
 //     $("#monthList").empty();
@@ -68,7 +69,7 @@ function renderFearsOfMonth () {
         fearsOfMonthListEl = fearsOfMonthList.join();
         var fearsOfMonthListItem = $("<li>")
         // var fearsOfMonthListItemCheckbox = $("<button>").attr("class", "fearsOfMonthListBtn uk-button uk-button-default uk-button-small");
-        fearsOfMonthListItem.html(" <button class='fearsOfMonthListBtn uk-button uk-button-primary uk-button-small'>-Fear Conquered!</button>");
+        fearsOfMonthListItem.html("-<button class='fearsOfMonthListBtn uk-button uk-button-primary uk-button-small'>Fear Conquered!</button>");
         fearsOfMonthListItem.prepend(fearsOfMonthList[i]);
         $("#monthList").append(fearsOfMonthListItem);
       
@@ -122,31 +123,49 @@ function renderFearsConquered () {
 
 $(".fearsOfMonthListBtn").on("click", function (event){
     event.preventDefault();
-    fearsConqueredNew = $(this).parent().text().split("-")[0];
+    fearsConqueredNew = $(this).parent().text().split("-")[0];                          //returns text without button text
     fearsConqueredList.push(fearsConqueredNew);
     fearsOfMonthList = JSON.parse(localStorage.getItem("fearsOfMonthLocal")) || [];
     
-    fearsOfMonthList.filter(function (element){
-        // console.log(element);
-        console.log(fearsOfMonthList.indexOf(fearsConqueredNew));
-    })
-    const filteredfearsOfMonthList = fearsOfMonthList.filter(fearsConquered => fearsConquered !== fearsConqueredNew);
-    console.log(filteredfearsOfMonthList);
+    // fearsOfMonthList.filter(function (element){
+    //     // console.log(element);
+    //     // console.log(fearsOfMonthList.indexOf(fearsConqueredNew));
+    // })
 
+    
+    // function arrayRemove(arr, value) { return arr.filter(function(ele){ return ele != value; });}var result = arrayRemove(array, 6);// result = [1, 2, 3, 4, 5, 7, 8, 9, 0]
+    
+    // function arrayRemove(arr, value) { 
+    //     return arr.filter(function(ele){ 
+    //         console.log("element: " + ele);
+    //         console.log("value: " + value);
+    //         return (ele !== value); 
+            
+    //     });
+    // }
 
+    // console.log(fearsOfMonthList);
+    // var filteredfearsOfMonthList = arrayRemove(fearsOfMonthList, fearsConqueredNew);
     // console.log(fearsConqueredNew);
-    console.log(fearsOfMonthList);
+    const filteredfearsOfMonthList = fearsOfMonthList.filter(ele => ele !== fearsConqueredNew);
+    // console.log(fearsOfMonthList);
+    // console.log(filteredfearsOfMonthList);
+    fearsOfMonthList = filteredfearsOfMonthList;
+    // console.log(fearsOfMonthList);
+
+
+    
 
     // console.log(fearsOfMonthList.indexOf(fearsConqueredNew));
     
     
     // fearsOfMonthList.splice(fearsConqueredNew);
     // console.log(fearsOfMonthList);
-    // localStorage.setItem("fearsOfMonthLocal", JSON.stringify(fearsOfMonthList));
-    // localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
-    // renderFearsOfMonth();    
-    // renderFearsConquered();
-
+    localStorage.setItem("fearsOfMonthLocal", JSON.stringify(fearsOfMonthList));
+    localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
+    renderFearsOfMonth();    
+    renderFearsConquered();
+    location.reload();
 })
 
 // $(document).ready(function(){
