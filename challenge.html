@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Develop/Style/normalize.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css"/>
     <link rel="stylesheet" href="Develop/Style/style.css" />
+    <link rel="stylesheet" href="Develop/Style/challenge.css" />
     <link rel="" href="userGuide.html"/>
   
   </head>
@@ -34,10 +35,13 @@
           <ul class="uk-navbar-nav">
             <img  id="adorable-avatar" src ="https://api.adorable.io/avatars/285/abott@adorable.png"   alt="Profile photo" width="100px" height="100px"/>
             <li class="uk-disabled"><a id="user" href=""></a></li>
-            <li class="uk-disabled"><a href="">Level 1</a></li>
-            <li class="uk-disabled"><a href="">Brave Bunny</a></li>
+            <li class="uk-disabled"><a class = "level" href="">Level 1</a></li>
+            <li class="uk-disabled"><a class = "levelName" href="">Brave Bunny</a></li>
           </ul>
-          <progress class="uk-progress" value="5" max="100"></progress>
+          <!-- <progress class="uk-progress" value="0" max="100"></progress> -->
+          <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
         </div>
       </div>
     </nav>
@@ -59,16 +63,8 @@
 
     <h1>Challenge yourself with a Fear-Setting Strategy</h1>
     <p>What is your worst, biggest fear? Help yourself out by diving deep into it.</p>
-    <div class = "uk-container">
-      <div class = "uk-child-width-1-2 uk-grid" uk-grid>
-        <div class = "uk-first-column">
-          <div class = "uk-panel">
-            <input class="uk-input bigFear" id="form-h-text" type="text" placeholder="Biggest Fear">
-            <button class="uk-button uk-button-primary" id="changeFear1">Change Your Fear</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <input class="uk-input bigFear" id="form-h-text" type="text" placeholder="Biggest Fear">
+    <button class="uk-button uk-button-primary" id="changeFear1">Change Your Fear</button>
 
     <hr class="uk-divider-icon">
 
@@ -126,18 +122,18 @@
 
     <div class = "celebration">
       <div class = "uk-container headerPosition">
-          <div class = "uk-child-width-1-2 uk-grid" uk-grid>
-            <div class = "uk-first-column">
-              <div class = "uk-panel gif">
+        <div class = "uk-child-width-1-2 uk-grid" uk-grid>
+          <div class = "uk-first-column">
+            <div class = "uk-panel gif">
 
-              </div>
-            </div>
-            <div class = "second-column">
-              <div class = "uk-panel quote">
-
-              </div>
             </div>
           </div>
+          <div class = "second-column">
+            <div class = "uk-panel quote">
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -148,6 +144,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="Develop/config.js"></script>
     <script src="Develop/script.js"></script>
+    <script src="Develop/script2.js"></script>
     <script src="Develop/script3.js"></script>
   </body>
 </html>
