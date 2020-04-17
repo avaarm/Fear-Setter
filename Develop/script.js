@@ -1,5 +1,13 @@
 $(".uk-button-small").on("click", function () {
+  callAPIs();
+});
 
+
+$("#saveFear").on("click", function () {
+  callAPIs();
+});
+
+function callAPIs() {
   // Inspirational Quote API
   $.ajax({
     url: "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand",
@@ -19,5 +27,4 @@ $(".uk-button-small").on("click", function () {
     randGIF.attr("src", imageUrl).attr("alt", "random image");
     $(".gif").append(randGIF);
   });
-
-});
+}
