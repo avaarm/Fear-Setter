@@ -20,7 +20,7 @@
           <div class = "uk-navbar-item"></div>
             <ul class="uk-navbar-nav" id="navBarLinks">
               <li><a href="index.html">Home</a></li>
-              <li><a href="">Create an Account</a></li>
+              <li><a id="createUser" href="#usernameModal">Create an Account</a></li>
               <li><a href="userGuide.html">User Guide</a></li>
               <li class="uk-active"><a href="challenge.html">Challenge Yourself</a></li>
             </ul>
@@ -33,7 +33,7 @@
         <div class = "uk-navbar-center">
           <ul class="uk-navbar-nav">
             <img src="https://img.icons8.com/color/100/000000/dinosaur.png"   alt="Profile photo" width="100px" height="100px"/>
-            <li><a href="">Username</a></li>
+            <li id="user" class="uk-active"><a href=""></a></a></li>
             <li><a href="">Level 1</a></li>
             <li><a href="">Brave Bunny</a></li>
           </ul>
@@ -130,7 +130,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="Develop/config.js"></script>
   <script src="Develop/script.js"></script>
-  <!-- <script src="Develop/script2.js"></script> -->
+  <script src="Develop/script2.js"></script>
 <script>
 
   if(localStorage.getItem("bigFearObject") !== null) {
