@@ -1,3 +1,14 @@
 #adorable-avatar {
     padding-top: 10px;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 0%;
+    height: 30px;
+    background-color: green;
   }

@@ -1,8 +1,32 @@
+var levelNames = ["Brave Bunny", "Courageous Cat", "Daring Dog", "Fearless Ferret", "Gutsy Gator", "Heroic Hog", "Strong Snake", "Toughest Tiger"]
+var bar = $("#myBar");
+var newPerc = 0;
+
 $(".uk-button-small").on("click", function () {
+  newPerc += 10;
+  bar.css("width", newPerc + "%");
+  if (newPerc >= 100) {
+    newPerc = 0;
+    bar.css("width", newPerc + "%");
+    var currentLevel = $(".level").text();
+    var popped = currentLevel.charAt(currentLevel.length-1);
+    $(".level").text("Level - " + (parseInt(popped) + 1));
+    $(".levelName").text(levelNames[parseInt(popped)]);
+  }
   callAPIs();
 });
 
 $("#saveFear").on("click", function () {
+  newPerc += 50;
+  bar.css("width", newPerc + "%");
+  if (newPerc >= 100) {
+    newPerc = 0;
+    bar.css("width", newPerc + "%");
+    var currentLevel = $(".level").text();
+    var popped = currentLevel.charAt(currentLevel.length-1);
+    $(".level").text("Level - " + (parseInt(popped) + 1));
+    $(".levelName").text(levelNames[parseInt(popped)]);
+  }
   callAPIs();
 });
 
@@ -42,4 +66,29 @@ function callAPIs() {
     $(".gif").append(randGIF);
   });
 }
+
+// $(document).ready(function () {
+//   var levelNames = ["Brave Bunny", "Courageous Cat", "Daring Dog", "Fearless Ferret", "Gutsy Gator", "Heroic Hog", "Strong Snake", "Toughest Tiger"]
+//   var bar = $(".uk-progress");
+//   $(".uk-button-small").on("click", function () {
+//     bar.value += 10;
+//     if (bar.value >= bar.max) {
+//       bar.value = 0;
+//       var popped = $(".level").text.pop();
+//       $(".level").text += (parseInt(popped) + 1);
+//       $(".levelName").text = levelNames[parseInt(popped)];
+//     }
+//   });
+
+//   $("#saveFear").on("click", function () {
+//     bar.value += 50;
+//     if (bar.value >= bar.max) {
+//       bar.value = 0;
+//       var popped = $(".level").text.pop();
+//       $(".level").text += (parseInt(popped) + 1);
+//       $(".levelName").text = levelNames[parseInt(popped)];
+//     }
+//   });
+// });
+
 
