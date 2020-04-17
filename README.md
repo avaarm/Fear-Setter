@@ -1,21 +1,26 @@
-# Project-1_Fear-Conqueror
+# Project-1_Fear-Setting
 
 
-# Unit 7: Project 1
 
-## Overview
-Welcome to Project 1! This is an important step in your full-stack journey as you will now use your newly acquired skills and knowledge to build web application from scratch. With your team, you will conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. Because you will be working collaboratively, you will learn agile development methodologies and implement feature and bug fixes using the git branch workflow and pull requests.
 
-## Key Topics
-* Server-side APIs
-* Git branching workflow
-* Agile software development
+
+This is a project that integrates multiple server-side APIs and aims to solve a real world problem. Amidst the current pandemic there are a lot of individuals who are faced with daily fears. This application aims to create a safe space where an indvidual can face their fears and aim to overcome them. The application will reward the action of facing a fear by generating a positive quote and an entertaining Giphy when a fear task is completed. 
+
+
 
 ## Comprehension Check
 You will be employer-ready if you can answer the following questions:
-1. What is agile software development?
+1. What is agile software development? Making small incremental changes, starting with MVP. 
 2. What is an MVP? minimum viable product 
 3. If you pull down a teammate's branch and you have merge conflicts, how do you handle it? You can assign someone to review the code via code or your favorite editor (e.g. VS Code either allows you to accept or reject incoming changes from the merge)
+
+
+## Collaborators
+1. Armenuhi Avanesyan 
+2. Eric Purrington
+3. Dan Weikart 
+
+
 
 ## Learning Objectives
 You will be employer-competitive if you are able to:

@@ -27,7 +27,7 @@ progress::-uk-progress-value {
 /* The button to invite Friends */
 .uk-button-default { 
     position:relative;
-    margin-top: 40%;
+    margin-top: 20%;
     background-color: #f08a5d;
    } 
 /* The Modal (background) */
