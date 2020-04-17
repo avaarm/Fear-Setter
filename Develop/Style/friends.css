@@ -1,8 +1,13 @@
 
+
 body {
   background-color: orange;
   
  }
+
+#shareButtons {
+  margin-top: 100px;
+}
 
 .center {
   display: block;
