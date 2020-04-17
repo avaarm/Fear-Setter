@@ -5,14 +5,17 @@ This is a project that integrates multiple server-side APIs and aims to solve a 
 
 ## Comprehension Check
 Can you answer the following questions:
-1. What is agile software development? Making small incremental changes, starting with MVP. 
-2. What is an MVP? minimum viable product 
-3. If you pull down a teammate's branch and you have merge conflicts, how do you handle it? You can assign someone to review the code via code or your favorite editor (e.g. VS Code either allows you to accept or reject incoming changes from the merge)
+1. What is agile software development? 
+Making small incremental changes & starting with MVP. 
+2. What is an MVP? 
+Minimum Viable Product. 
+3. If you pull down a teammate's branch and you have merge conflicts, how do you handle it? 
+You can assign someone to review the code directly on github or on your favorite editor (e.g. VS Code either allows you to accept or reject incoming changes from the merge).
 
 
 ## Learning Objectives
 
-* Speak technically about a feature you implemented in your project
+* Speak technically about a feature we implemented in our project
 * Explain and execute git branching workflow in a collaborative project
 * Resolve merge conflicts
 * Explain agile software development
@@ -25,11 +28,12 @@ Moment
 Giphy API
 Quote generator API 
 (IFTTT & Pushover for future use)
+Adorable Avatars API 
 
 
 ## Frameworks 
 
-UI KIT (an alternative to bootstrap) - this
+UI KIT (an alternative to bootstrap) - this was chosen because of it's extensive documentation and the high quantitiy of features available. 
 
 
 ## Authors
@@ -39,6 +43,8 @@ UI KIT (an alternative to bootstrap) - this
 
 ## Acknowledgements
 1. UW Coding Bootcamp course activities
+2. Slide Carnival - project presentations 
+3. Colorinspo - color patterns 
 
 
 ## Documentation

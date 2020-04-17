@@ -1,6 +1,6 @@
 #navBar1 {
     text-emphasis-color: white;
-    background-color: #6a2c70;
+    background-color: #ffd460;
 }
 #navBarLinks {
     text-align: right;
@@ -9,14 +9,14 @@
 
 #navBar2 {
     text-emphasis-color: white;
-    background-color: #b83b5e;
+    background-color: #f07b3f;
 }
 
 progress{
     border: black;
     width: 20px;
     height: 20px;
-    background: crimson;
+    background-color: white;
 }
 
 progress::-uk-progress-value {
@@ -28,7 +28,7 @@ progress::-uk-progress-value {
 .uk-button-default { 
     position:relative;
     margin-top: 20%;
-    background-color: #f08a5d;
+    background-color: #b24968;
    } 
 /* The Modal (background) */
 .modal {
