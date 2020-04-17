@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Fear Setting</title>
+    <link rel="stylesheet" href="Develop/Style/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="Develop/Style/style.css" />
 </head>
 <body>
-
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar" id="navBar1"> <!--Adding an ID for styling in css -->
+          <div class="uk-navbar-left">
+            <img src="https://img.icons8.com/carbon-copy/100/000000/ghost.png"/>
+          </div>
+          <div class="uk-navbar-right">
+            <div class = "uk-navbar-item"></div>
+              <ul class="uk-navbar-nav" id="navBarLinks">
+                <li class="uk-active"><a href="index.html">Home</a></li>
+                <li><a id="createUser" href="#usernameModal">Create an Account</a></li>
+                <li><a href="userGuide.html">User Guide</a></li>
+                <li><a href="challenge.html">Challenge Yourself</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="uk-navbar-container" uk-navbar>
+         <div class="uk-navbar" id="navBar2"> <!--Adding an ID for styling in css -->
+          <div class = "uk-navbar-center">
+            <ul class="uk-navbar-nav">
+              <img src="https://img.icons8.com/color/100/000000/dinosaur.png"   alt="Profile photo" width="100px" height="100px"/>
+              <li class="uk-disabled"><a id="user" href=""></a></li>
+              <li class="uk-disabled"><a href="">Level 1</a></li>
+              <li class="uk-disabled"><a href="">Brave Bunny</a></li>
+            </ul>
+            <progress class="uk-progress" value="5" max="100"></progress>
+          </div>
+        </div>
+      </nav>
     "The world would be a much better place if everyone of us faced our fears" -Anonymous
 
 
@@ -36,6 +71,10 @@
         </p>
     </div>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="Develop/config.js"></script>
+    <script src="Develop/script.js"></script>
+    <script src="Develop/script2.js"></script>
+    <script src="Develop/script.js"></script>
 </body>
 </html>
