@@ -20,15 +20,19 @@ progress{
 }
 
 progress::-uk-progress-value {
+}
 
-
+#adorable-avatar {
+  padding-top: 10px;
 }
 
 /* The button to invite Friends */
 .uk-button-default { 
-    position:relative;
+    position: ;
     margin-top: 20%;
-    background-color: #b24968;
+    background-color: #2d4059;
+    color: white;
+    border-color: #ea5455;
    } 
 /* The Modal (background) */
 .modal {
