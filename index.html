@@ -17,13 +17,12 @@
       <div class="uk-navbar" id="navBar1"> <!--Adding an ID for styling in css -->
         <div class="uk-navbar-left">
           <img src="https://img.icons8.com/carbon-copy/100/000000/ghost.png"/>
-          <p>Fear Setting</p>
         </div>
         <div class="uk-navbar-right">
           <div class = "uk-navbar-item"></div>
             <ul class="uk-navbar-nav" id="navBarLinks">
               <li><a href="index.html">Home</a></li>
-              <li><a href="">Create an Account</a></li>
+              <li><a id="createUser" href="#usernameModal">Create an Account</a></li>
               <li><a href="userGuide.html">User Guide</a></li>
               <li class="uk-active"><a href="challenge.html">Challenge Yourself</a></li>
             </ul>
@@ -35,10 +34,10 @@
        <div class="uk-navbar" id="navBar2"> <!--Adding an ID for styling in css -->
         <div class = "uk-navbar-center">
           <ul class="uk-navbar-nav">
-            <img id="adorable-avatar"  src ="https://api.adorable.io/avatars/285/abott@adorable.png"  alt="Profile photo" width="100px" height="100px"/>
-            <li id="user" class="uk-active"><a href=""></a></a></li>
-            <li class="uk-active"><a href="">Level 1</a></li>
-            <li class="uk-active"><a href="">Brave Bunny</a></li>
+            <img  id="adorable-avatar" src ="https://api.adorable.io/avatars/285/abott@adorable.png"   alt="Profile photo" width="100px" height="100px"/>
+            <li class="uk-disabled"><a id="user" href=""></a></li>
+            <li class="uk-disabled"><a href="">Level 1</a></li>
+            <li class="uk-disabled"><a href="">Brave Bunny</a></li>
           </ul>
           <progress class="uk-progress" value="5" max="100"></progress>
         </div>
@@ -93,7 +92,7 @@
     </div>
 
     <div class = "celebration">
-      <div class = "uk-container">
+      <div class = "uk-container headerPosition">
         <div class = "uk-child-width-1-2 uk-grid" uk-grid>
           <div class = "uk-first-column">
             <div class = "uk-panel gif">
