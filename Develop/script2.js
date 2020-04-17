@@ -117,7 +117,7 @@ $(".fearsOfMonthListBtn").on("click", function (event){
     localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
     renderFearsOfMonth();    
     renderFearsConquered();
-    location.reload();
+    // location.reload();
 })                                  
 
 $(".fearOfDayListBtn").on("click", function (event){
@@ -131,7 +131,7 @@ $(".fearOfDayListBtn").on("click", function (event){
     localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
     renderFearOfDay();    
     renderFearsConquered();
-    location.reload();
+    // location.reload();
 })   
 
 

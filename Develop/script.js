@@ -28,3 +28,4 @@ function callAPIs() {
     $(".gif").append(randGIF);
   });
 }
+// $(document).on("click", ".uk-button-small", indexAPIs);
