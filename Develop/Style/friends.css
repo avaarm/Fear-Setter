@@ -1,13 +1,22 @@
 
 
 body {
-  background-color: orange;
-  background-image: url("download.jpg") ;
+  background-image: url("Background-1.png") ;
   height: 100vh;
   background-repeat: no-repeat;
-  background-position: center;
-  
- }
+  background-position: right;
+  background-size: 100%;
+}
+
+#userGuidelist {
+  justify-content: left;
+
+}
+
+
+#navBar1 {
+  background-color: #762766;
+}
 
 #shareButtons {
   margin-top: 100px;
@@ -22,11 +31,9 @@ body {
   padding-bottom: 40px
 }
 
-.uk-navbar-left {
+/* .uk-navbar-left {
   color:#b24968;
-  background-color: papayawhip;
-  
-}
+} */
 
 #adorable-avatar {
   padding-top: 10px;
@@ -37,32 +44,3 @@ p {
   text-align: center;
 }
 
-
-/* #wave {
-  position: relative;
-  height: 70px;
-  width: 600px;
-  background: #e0efe3;
-}
-#wave:before {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 340px;
-  height: 80px;
-  background-color: white;
-  right: -5px;
-  top: 40px;
-}
-#wave:after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 300px;
-  height: 70px;
-  background-color: #e0efe3;
-  left: 0;
-  top: 27px;
-} */
