@@ -1,34 +1,42 @@
 var levelNames = ["Brave Bunny", "Courageous Cat", "Daring Dog", "Fearless Ferret", "Gutsy Gator", "Heroic Hog", "Strong Snake", "Toughest Tiger"]
 var bar = $("#myBar");
-var newPerc = 0;
 
-$(".uk-button-small").on("click", function () {
-  newPerc += 10;
-  bar.css("width", newPerc + "%");
-  if (newPerc >= 100) {
-    newPerc = 0;
-    bar.css("width", newPerc + "%");
-    var currentLevel = $(".level").text();
-    var popped = currentLevel.charAt(currentLevel.length-1);
-    $(".level").text("Level - " + (parseInt(popped) + 1));
-    $(".levelName").text(levelNames[parseInt(popped)]);
-  }
+if (localStorage.getItem("levelObj") !== null) {
+  var levelObj = JSON.parse(localStorage.getItem("levelObj"));
+  bar.css("width", levelObj[0].progress + "%");
+  $(".level").text("Level - " + levelObj[0].level)
+  $(".levelName").text(levelObj[0].levelName);
+} else {
+  var levelObj = [{progress: 0, level: 1, levelName: "Brave Bunny"}]
+}
+
+$("#fearConqueredBtn").on("click", function () {
+  levelObj[0].progress += 10;
+  changeProgress();
   callAPIs();
 });
 
 $("#saveFear").on("click", function () {
-  newPerc += 50;
-  bar.css("width", newPerc + "%");
-  if (newPerc >= 100) {
-    newPerc = 0;
-    bar.css("width", newPerc + "%");
+  levelObj[0].progress += 50;
+  changeProgress();
+  callAPIs();
+});
+
+function changeProgress() {
+  bar.css("width", levelObj[0].progress + "%");
+  if (levelObj[0].progress >= 100) {
+    levelObj[0].progress = 0;
+    bar.css("width", levelObj[0].progress + "%");
     var currentLevel = $(".level").text();
     var popped = currentLevel.charAt(currentLevel.length-1);
     $(".level").text("Level - " + (parseInt(popped) + 1));
     $(".levelName").text(levelNames[parseInt(popped)]);
+    levelObj[0].level = (parseInt(popped) + 1);
+    levelObj[0].levelName = levelNames[parseInt(popped)];
   }
-  callAPIs();
-});
+  
+  localStorage.setItem("levelObj", JSON.stringify(levelObj));
+}
 
 function callAPIs() {
   $(".quote").empty();
@@ -66,29 +74,3 @@ function callAPIs() {
     $(".gif").append(randGIF);
   });
 }
-
-// $(document).ready(function () {
-//   var levelNames = ["Brave Bunny", "Courageous Cat", "Daring Dog", "Fearless Ferret", "Gutsy Gator", "Heroic Hog", "Strong Snake", "Toughest Tiger"]
-//   var bar = $(".uk-progress");
-//   $(".uk-button-small").on("click", function () {
-//     bar.value += 10;
-//     if (bar.value >= bar.max) {
-//       bar.value = 0;
-//       var popped = $(".level").text.pop();
-//       $(".level").text += (parseInt(popped) + 1);
-//       $(".levelName").text = levelNames[parseInt(popped)];
-//     }
-//   });
-
-//   $("#saveFear").on("click", function () {
-//     bar.value += 50;
-//     if (bar.value >= bar.max) {
-//       bar.value = 0;
-//       var popped = $(".level").text.pop();
-//       $(".level").text += (parseInt(popped) + 1);
-//       $(".levelName").text = levelNames[parseInt(popped)];
-//     }
-//   });
-// });
-
-
