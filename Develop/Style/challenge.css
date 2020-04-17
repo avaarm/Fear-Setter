@@ -4,11 +4,25 @@
 
 #myProgress {
     width: 100%;
-    background-color: grey;
-  }
+    background-color: #2d4059;
+    margin: 10px;
+}
   
-  #myBar {
+#myBar {
     width: 0%;
-    height: 30px;
-    background-color: green;
-  }
+    height: 20px;
+    background-color: #ffd460;
+}
+
+h1, p, .bigFear, #changeFear1, .chosenFear, #saveFear{
+    margin-left: 20px;
+}
+
+.uk-button-primary {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wellDoneHeader {
+    text-align: center;
+}

@@ -20,7 +20,7 @@ function renderFearsOfMonth () {
     for (var i = 0; i < fearsOfMonthList.length; i++) {
         fearsOfMonthListEl = fearsOfMonthList.join();
         var fearsOfMonthListItem = $("<li>")
-        fearsOfMonthListItem.html("-<button class='fearsOfMonthListBtn uk-button uk-button-primary uk-button-small'>Fear Conquered!</button>");
+        fearsOfMonthListItem.html("-<button class='fearsOfMonthListBtn uk-button uk-button-primary uk-button-small' id='fearConqueredBtn'>Fear Conquered!</button>");
         fearsOfMonthListItem.prepend(fearsOfMonthList[i]);
         $("#monthList").append(fearsOfMonthListItem);
     }
@@ -42,7 +42,7 @@ function renderFearOfDay () {
     for (var i = 0; i < fearOfDayList.length; i++) {
         fearOfDayListEl = fearOfDayList.join();
         var fearOfDayListItem = $("<li>");
-        fearOfDayListItem.html("-<button class='fearOfDayListBtn uk-button uk-button-primary uk-button-small'>Fear Conquered!</button>");
+        fearOfDayListItem.html("-<button class='fearOfDayListBtn uk-button uk-button-primary uk-button-small' id='fearConqueredBtn'>Fear Conquered!</button>");
         fearOfDayListItem.prepend(fearOfDayList[i]);
         $("#dayList").append(fearOfDayListItem);
     }
