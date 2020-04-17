@@ -1,39 +1,3 @@
-var newUsername = ""
-// var modal = document.getElementById("myModal");
-var savebtn = document.getElementsByClassName("saveUserbtn")[0];
-// Get the button that opens the modal
-var usernamebtn = document.getElementById("createUser");
-// var btn = $("#createUser");
-var cancel = document.getElementsByClassName("cancelbtn")[0];
-usernamebtn.onclick = function() {
-    $("#usernameModal").css("display", "block");
-}
-
-cancel.onclick = function() {
-    $("#usernameModal").css("display", "none");
-    // $("#usernameModal").style.display = "none";
-}
-savebtn.onclick = function() {
-    // event.preventDefault();
-    storeUser();
-    // alert("user saved");
-    $("#usernameModal").css("display", "none");
-}
-
-function storeUser () {
-    var newUsername = $("#usernameInput").val();
-    console.log(newUsername);
-    $("#user").text(newUsername);
-    localStorage.setItem("userLocal", JSON.stringify(newUsername));
-}
-// // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == $("#usernameModal")) {
-    $("#usernameModal").css("display", "none");
-  }
-}
-
-
 var fearsOfMonthList = JSON.parse(localStorage.getItem("fearsOfMonthLocal")) || []; 
 var fearsOfMonthListEl = $("#monthList");
 var fearsOfMonthNew = ""
@@ -49,29 +13,16 @@ var fearsConqueredNew = ""
 renderFearsOfMonth();
 renderFearOfDay();
 renderFearsConquered();
+renderUser();
 
-// function renderFearsOfMonth () {
-//     $("#monthList").empty();
-//     for (var i = 0; i < fearsOfMonthList.length; i++) {
-//         fearsOfMonthListEl = fearsOfMonthList.join();
-//         var fearsOfMonthListItem = $("<li>").html("<input class='uk-checkbox' type='checkbox' />");
-//         var fearsOfMonthListItemCheckbox = $("<input>").attr({class: "uk-checkbox", type: "checkbox"});
-//         fearsOfMonthListItem.text(fearsOfMonthList[i]);
-//         fearsOfMonthListItem.append(fearsOfMonthListItemCheckbox);
-//         $("#monthList").append(fearsOfMonthListItem);
-      
-//     }
-// };
 function renderFearsOfMonth () {
     $("#monthList").empty();
     for (var i = 0; i < fearsOfMonthList.length; i++) {
         fearsOfMonthListEl = fearsOfMonthList.join();
         var fearsOfMonthListItem = $("<li>")
-        // var fearsOfMonthListItemCheckbox = $("<button>").attr("class", "fearsOfMonthListBtn uk-button uk-button-default uk-button-small");
-        fearsOfMonthListItem.html(" <button class='fearsOfMonthListBtn uk-button uk-button-primary uk-button-small'>-Fear Conquered!</button>");
+        fearsOfMonthListItem.html("-<button class='fearsOfMonthListBtn uk-button uk-button-primary uk-button-small'>Fear Conquered!</button>");
         fearsOfMonthListItem.prepend(fearsOfMonthList[i]);
         $("#monthList").append(fearsOfMonthListItem);
-      
     }
 };
 
@@ -90,12 +41,10 @@ function renderFearOfDay () {
     $("#dayList").empty();
     for (var i = 0; i < fearOfDayList.length; i++) {
         fearOfDayListEl = fearOfDayList.join();
-        var fearOfDayListItem = $("<li>").html("<input class='uk-checkbox' type='checkbox' />");
-        var fearOfDayListItemCheckbox = $("<input>").attr({class: "uk-checkbox", type: "checkbox"});
-        fearOfDayListItem.text(fearOfDayList[i]);
-        fearOfDayListItem.append(fearOfDayListItemCheckbox);
+        var fearOfDayListItem = $("<li>");
+        fearOfDayListItem.html("-<button class='fearOfDayListBtn uk-button uk-button-primary uk-button-small'>Fear Conquered!</button>");
+        fearOfDayListItem.prepend(fearOfDayList[i]);
         $("#dayList").append(fearOfDayListItem);
-        
     }
 };
 
@@ -122,55 +71,55 @@ function renderFearsConquered () {
 
 $(".fearsOfMonthListBtn").on("click", function (event){
     event.preventDefault();
-    fearsConqueredNew = $(this).parent().text().split("-")[0];
+    fearsConqueredNew = $(this).parent().text().split("-")[0];                          //returns text without button text
     fearsConqueredList.push(fearsConqueredNew);
     fearsOfMonthList = JSON.parse(localStorage.getItem("fearsOfMonthLocal")) || [];
-    
-    fearsOfMonthList.filter(function (element){
-        // console.log(element);
-        console.log(fearsOfMonthList.indexOf(fearsConqueredNew));
-    })
-    const filteredfearsOfMonthList = fearsOfMonthList.filter(fearsConquered => fearsConquered !== fearsConqueredNew);
-    console.log(filteredfearsOfMonthList);
+    const filteredfearsOfMonthList = fearsOfMonthList.filter(ele => ele !== fearsConqueredNew); //filter out fearsConqueredNew. New array is filteredFearsOfMonthList
+    fearsOfMonthList = filteredfearsOfMonthList;       
+    localStorage.setItem("fearsOfMonthLocal", JSON.stringify(fearsOfMonthList));
+    localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
+    renderFearsOfMonth();    
+    renderFearsConquered();
+    location.reload();
+})                                  
 
+$(".fearOfDayListBtn").on("click", function (event){
+    event.preventDefault();
+    fearsConqueredNew = $(this).parent().text().split("-")[0];
+    fearsConqueredList.push(fearsConqueredNew);
+    fearOfDayList = JSON.parse(localStorage.getItem("fearOfDayLocal")) || [];
+    const filteredfearOfDayList = fearOfDayList.filter(ele => ele !== fearsConqueredNew);
+    fearOfDayList = filteredfearOfDayList;       
+    localStorage.setItem("fearOfDayLocal", JSON.stringify(fearOfDayList));
+    localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
+    renderFearOfDay();    
+    renderFearsConquered();
+    location.reload();
+})   
 
-    // console.log(fearsConqueredNew);
-    console.log(fearsOfMonthList);
+// Code for username modal
+var newUsername = JSON.parse(localStorage.getItem("userLocal"))
+var savebtn = document.getElementsByClassName("saveUserbtn")[0];
+var usernamebtn = document.getElementById("createUser");
+var cancel = document.getElementsByClassName("cancelbtn")[0];
+usernamebtn.onclick = function() {
+    $("#usernameModal").css("display", "block");
+}
+cancel.onclick = function() {
+    $("#usernameModal").css("display", "none");
+}
+savebtn.onclick = function() {
+    storeUser();
+    $("#usernameModal").css("display", "none");
+}
 
-    // console.log(fearsOfMonthList.indexOf(fearsConqueredNew));
-    
-    
-    // fearsOfMonthList.splice(fearsConqueredNew);
-    // console.log(fearsOfMonthList);
-    // localStorage.setItem("fearsOfMonthLocal", JSON.stringify(fearsOfMonthList));
-    // localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
-    // renderFearsOfMonth();    
-    // renderFearsConquered();
-
-})
-
-// $(document).ready(function(){
-//     $('input[type="checkbox"]').click(function(){
-//         if($(this).prop("checked") == true){
-//             fearsConqueredNew = $(this).parent().text();
-//             fearsConqueredList.push(fearsConqueredNew);
-//             // var fearRemoved = $(this).parent().text();
-//             // $(this).parent().remove();
-//             // $(this).remove();
-//             fearsOfMonthList = JSON.parse(localStorage.getItem("fearsOfMonthLocal")) || [];
-//             // console.log(fearsOfMonthList);
-//             // console.log(fearRemoved);
-//             fearsOfMonthList.splice(fearsConqueredNew, 1);
-//             // console.log(fearsOfMonthList);
-//             localStorage.setItem("fearsOfMonthLocal", JSON.stringify(fearsOfMonthList));
-//             console.log(fearsOfMonthList);
-//             // localStorage.removeItem("fearsOfMonthLocal", $(this).parent().text());
-//             // console.log($(this).parent().text());
-//             localStorage.setItem("fearsConqueredLocal", JSON.stringify(fearsConqueredList));
-//             // location.reload();
-// }
-// renderFearsOfMonth();    
-// renderFearsConquered();
-// // location.reload();
-//     })
-// });
+function storeUser () {
+    newUsername = $("#usernameInput").val();
+    localStorage.setItem("userLocal", JSON.stringify(newUsername));
+    renderUser ();
+}
+function renderUser () {
+    newUsername = JSON.parse(localStorage.getItem("userLocal"));
+    console.log(newUsername);
+    $("#user").text(newUsername);
+}

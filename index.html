@@ -14,28 +14,33 @@
   </head>
   <body>
     <nav class="uk-navbar-container" uk-navbar>
-      <div class="uk-navbar-left" id="navBar1"> <!--Adding an ID for styling in css -->
-        <ul class="uk-navbar-nav" id="navBarLinks">
-          <img src="https://img.icons8.com/carbon-copy/100/000000/ghost.png" alt="Ghost logo"/>
-          <li  class="uk-active"><a id="createUser" href="#usernameModal">Create an Account</a></li>
-          <li class="uk-active"><a href="index.html">Home</a></li>
-          <li class="uk-active"><a href="userGuide.html">User Guide</a></li>
-          <li class="uk-active"><a href="challenge.html">We Challenge You</a></li>
-          <li><a href=""></a></li>
-        </ul>
+      <div class="uk-navbar" id="navBar1"> <!--Adding an ID for styling in css -->
+        <div class="uk-navbar-left">
+          <img src="https://img.icons8.com/carbon-copy/100/000000/ghost.png"/>
+        </div>
+        <div class="uk-navbar-right">
+          <div class = "uk-navbar-item"></div>
+            <ul class="uk-navbar-nav" id="navBarLinks">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="">Create an Account</a></li>
+              <li><a href="userGuide.html">User Guide</a></li>
+              <li class="uk-active"><a href="challenge.html">Challenge Yourself</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
     <nav class="uk-navbar-container" uk-navbar>
-       <div class="uk-navbar-left" id="navBar2"> <!--Adding an ID for styling in css -->
-        <ul class="uk-navbar-nav">
-          <img id="dinoUser" src="https://img.icons8.com/color/100/000000/dinosaur.png" alt="Profile photo" width="100px" height="100px"/>
-          <li id="user" class="uk-active"><a href=""></a></a></li>
-          <li class="uk-active"><a href="">Level 1</a></li>
-          <li class="uk-active"><a href="">Brave Bunny</a></li>
-          <li class="uk-parent"><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
-        <progress class="uk-progress" value="5" max="100"></progress>
+       <div class="uk-navbar" id="navBar2"> <!--Adding an ID for styling in css -->
+        <div class = "uk-navbar-center">
+          <ul class="uk-navbar-nav">
+            <img src="https://img.icons8.com/color/100/000000/dinosaur.png"   alt="Profile photo" width="100px" height="100px"/>
+            <li id="user" class="uk-active"><a href=""></a></a></li>
+            <li class="uk-active"><a href="">Level 1</a></li>
+            <li class="uk-active"><a href="">Brave Bunny</a></li>
+          </ul>
+          <progress class="uk-progress" value="5" max="100"></progress>
+        </div>
       </div>
     </nav>
 
@@ -85,14 +90,37 @@
       </ul>
       </div>
     </div>
+
+    <div class = "celebration">
+      <div class = "uk-container">
+        <div class = "uk-child-width-1-2 uk-grid" uk-grid>
+          <div class = "uk-first-column">
+            <div class = "uk-panel gif">
+              
+            </div>
+          </div>
+          <div class = "second-column">
+            <div class = "uk-panel quote">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <form action="inviteFriends.html" method="get" target="_blank">
+<<<<<<< HEAD
       <button class="uk-button uk-button-default" a href="inviteFriends.html">Share With Friends</button>
    </form>
+=======
+      <button class="uk-button uk-button-default" a href="inviteFriends.html">Invite Friends</button>
+    </form>
+>>>>>>> 7b2a53af6ce9a16c3dc213f85ee37f7d64abaa53
     
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- <script src="Develop/uikit.js"></script> -->
-  <!-- <script src="Develop/config.js"></script>
-  <script src="Develop/script.js"></script> -->
+  <script src="Develop/config.js"></script>
+  <script src="Develop/script.js"></script>
   <script src="Develop/script2.js"></script>
   <script></script>
   </body>
