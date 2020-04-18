@@ -10,17 +10,17 @@ if (localStorage.getItem("levelObj") !== null) {
   var levelObj = [{progress: 0, level: 1, levelName: "Brave Bunny"}]
 }
 
-$("#fearConqueredBtn").on("click", function () {
-  levelObj[0].progress += 10;
+function fearConq() {
+  levelObj[0].progress += 25;
   changeProgress();
   callAPIs();
-});
+};
 
-$("#saveFear").on("click", function () {
-  levelObj[0].progress += 50;
-  changeProgress();
-  callAPIs();
-});
+// $("#saveFear").on("click", function () {
+//   levelObj[0].progress += 50;
+//   changeProgress();
+//   callAPIs();
+// });
 
 function changeProgress() {
   bar.css("width", levelObj[0].progress + "%");
@@ -74,3 +74,5 @@ function callAPIs() {
     $(".gif").append(randGIF);
   });
 }
+
+$(document).on("click", "#fearConqueredBtn", fearConq);
