@@ -3,6 +3,9 @@
 This is a project that integrates multiple server-side APIs and aims to solve a real world problem. Amidst the current pandemic there are a lot of individuals who are faced with daily fears. This application aims to create a safe space where an indvidual can face their fears and aim to overcome them. The application will reward the action of facing a fear by generating a positive quote and an entertaining Giphy when a fear task is completed. 
 
 
+![Home Page](Develop/Style/Fear_Setting_Home.gif)
+
+
 ## Comprehension Check
 Can you answer the following questions:
 1. What is agile software development? 
