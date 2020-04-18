@@ -3,6 +3,12 @@
 This is a project that integrates multiple server-side APIs and aims to solve a real world problem. Amidst the current pandemic there are a lot of individuals who are faced with daily fears. This application aims to create a safe space where an indvidual can face their fears and aim to overcome them. The application will reward the action of facing a fear by generating a positive quote and an entertaining Giphy when a fear task is completed. 
 
 
+## Project Presentation
+
+[Project Presentation](https://docs.google.com/presentation/d/1jHOT-nh048uuWxn0Bx-Eeh37WNfCbdo3fWs7bjLh_Qo/edit?usp=sharing)
+
+
+
 ## Comprehension Check
 Can you answer the following questions:
 1. What is agile software development? 
@@ -29,7 +35,7 @@ You can assign someone to review the code directly on github or on your favorite
 * Quote generator API 
 * (IFTTT & Pushover for future use)
 * Adorable Avatars API ( need to figure out storage and saving accounts)
-* Moment 
+
 
 
 ## Frameworks 
@@ -46,6 +52,7 @@ UI KIT (an alternative to bootstrap) - this was chosen because of it's extensive
 1. UW Coding Bootcamp course activities
 2. Slide Carnival - project presentations 
 3. Colorinspo - color patterns 
+4. ShareThis
 
 
 ## Design 
