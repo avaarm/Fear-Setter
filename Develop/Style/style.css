@@ -1,16 +1,21 @@
 body {
-  background-image: url("Background-3.png") ;
-  /* height: 100vh; */
+  background-image: url("Background-2.png"), url("Background-6.png") ;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 100%;
+  background-repeat: no-repeat, no-repeat;
+  /* background-position: right; */
+  background-position: right bottom, left bottom;
+  background-size: 40%;
+
 }
 
 
 #navBar1 {
     text-emphasis-color: white;
-    background-color: purple;
+    background-color: #762766;
+    background-image: url("Background-5.png") ;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100%;
 }
 #navBarLinks {
     text-align: right;
@@ -18,29 +23,45 @@ body {
 
 
 #navBar2 {
-    text-emphasis-color: white;
-    background-color: #f07b3f;
+  text-emphasis-color: white;
+  background-color: #f2ba32;
+  /* background-image: url("Background-7.png") ;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100%; */
+
+  /* padding-bottom: 0px; */
 }
+
+.uk-grid {
+  padding-top: 50px;
+}
+
+.cancelbtn, .saveUserbtn, .uk-button {
+  background-color: #762766;
+
+
+}
+
 
 progress{
     border: black;
     width: 20px;
     height: 20px;
     background-color: white;
+    float: 
 }
 
-progress::-uk-progress-value {
-}
-
-#adorable-avatar {
-  padding-top: 10px;
+.adorable-avatar {
+  padding: 10px;
+  float: left;
 }
 
 /* The button to invite Friends */
 .uk-button-default { 
-    position: ;
-    margin-top: 20%;
-    background-color: #2d4059;
+    background-color: #f2ba32;
+    margin-top: 90px;
+    margin-right: 50px
     color: white;
     border-color: #ea5455;
    } 
