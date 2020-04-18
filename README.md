@@ -24,11 +24,12 @@ You can assign someone to review the code directly on github or on your favorite
 
 
 ## API used 
-Moment 
-Giphy API
-Quote generator API 
-(IFTTT & Pushover for future use)
-Adorable Avatars API 
+
+* Giphy API
+* Quote generator API 
+* (IFTTT & Pushover for future use)
+* Adorable Avatars API ( need to figure out storage and saving accounts)
+* Moment 
 
 
 ## Frameworks 
@@ -45,6 +46,12 @@ UI KIT (an alternative to bootstrap) - this was chosen because of it's extensive
 1. UW Coding Bootcamp course activities
 2. Slide Carnival - project presentations 
 3. Colorinspo - color patterns 
+
+
+## Design 
+1. Image Color Picker - https://imagecolorpicker.com/en/
+2. Volumnia -SlidesCarnival (used for design and slides)
+
 
 
 ## Documentation
