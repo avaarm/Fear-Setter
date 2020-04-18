@@ -17,8 +17,6 @@ function fearConq() {
 };
 
 $("#saveFear").on("click", function () {
-  // levelObj[0].progress += 50;
-  // changeProgress();
   callAPIs();
 });
 
