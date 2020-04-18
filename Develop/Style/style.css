@@ -34,6 +34,10 @@ body {
   /* padding-bottom: 0px; */
 }
 
+a {
+  color: red;
+}
+
 .uk-grid {
   padding-top: 50px;
 }

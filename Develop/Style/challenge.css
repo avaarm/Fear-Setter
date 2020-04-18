@@ -27,3 +27,7 @@ h1, p, .bigFear, #changeFear1, .chosenFear, #saveFear{
 .wellDoneHeader {
     text-align: center;
 }
+
+a {
+    color: red;
+  }
