@@ -16,11 +16,11 @@ function fearConq() {
   callAPIs();
 };
 
-// $("#saveFear").on("click", function () {
-//   levelObj[0].progress += 50;
-//   changeProgress();
-//   callAPIs();
-// });
+$("#saveFear").on("click", function () {
+  // levelObj[0].progress += 50;
+  // changeProgress();
+  callAPIs();
+});
 
 function changeProgress() {
   bar.css("width", levelObj[0].progress + "%");
