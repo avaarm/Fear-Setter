@@ -1,4 +1,4 @@
-# Project-1_Fear-Setting
+# Fear-Setter
 
 This is a project that integrates multiple server-side APIs and aims to solve a real world problem. Amidst the current pandemic there are a lot of individuals who are faced with daily fears. This application aims to create a safe space where an indvidual can face their fears and aim to overcome them. The application will reward the action of facing a fear by generating a positive quote and an entertaining Giphy when a fear task is completed. 
 
@@ -57,7 +57,7 @@ UI KIT (an alternative to bootstrap) - this was chosen because of it's extensive
 
 
 ## Authors
-1. Armenuhi Avanesyan 
+1. Emma
 2. Eric Purrington
 3. Dan Weikart 
 
